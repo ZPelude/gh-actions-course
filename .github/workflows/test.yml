@@ -9,12 +9,12 @@ jobs:
   test:
     needs: lint 
     runs-on: ubuntu-latest
-      steps:
-        - name: Print greeting
-          run: echo "I am test"
+    steps:
+      - name: Print greeting
+        run: echo "I am test"
   deploy:
     needs: test
     runs-on: ubuntu-latest
-      steps:
-        - name: Print greeting
-          run: echo "I am deployment"
+    steps:
+      - name: Print greeting
+        run: echo "I am deployment"
