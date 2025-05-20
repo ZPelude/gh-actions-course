@@ -1,0 +1,20 @@
+name: First Workflow
+on: push
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print greeting
+        run: echo "I am lint"
+  test:
+    needs: lint 
+    runs-on: ubuntu-latest
+      steps:
+        - name: Print greeting
+          run: echo "I am test"
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+      steps:
+        - name: Print greeting
+          run: echo "I am deployment"
